@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-country-page',
+  selector: 'countries-country-page',
   templateUrl: './country-page.component.html',
   styles: ``
 })
