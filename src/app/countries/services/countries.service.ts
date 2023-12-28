@@ -18,4 +18,22 @@ export class CountriesService {
         })
       );
   }
+
+  searchCountryByName(term:string):Observable<Country[]>{
+    return this.http.get<Country[]>(`${this.apiUrl}/name/${term}`)
+      .pipe(
+        catchError(err => {
+          return of([])
+        })
+      );
+  }
+
+  searchCountryByRegion(term:string):Observable<Country[]>{
+    return this.http.get<Country[]>(`${this.apiUrl}/region/${term}`)
+      .pipe(
+        catchError(err => {
+          return of([])
+        })
+      );
+  }
 }
