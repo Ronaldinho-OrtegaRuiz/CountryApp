@@ -3,9 +3,12 @@
 
 <div class="row">
   <div class="col">
-    <shared-search-box
-      (OnValue)="searchByRegion($event)"
-      placeholder="Buscar por región"></shared-search-box>
+    <button *ngFor="let region of regions"
+            class="btn mx-2"
+            [class.btn-primary]="region === selectedRegion"
+            (click)="searchByRegion(region)">
+      {{region}}
+    </button>
   </div>
 
 </div>
